@@ -59,37 +59,6 @@ function CopyReportSheet(reportSheetName,newSpreadSheetId,masterSheet) {
   return newSpreadSheet;
 };
 
-/*
-
-Old Code that try to copy RowHeight-- not good enough
-
-function getRowHeights(range) {
-  var rngRowStart = range.getRow();
-  var rngRowHeight = range.getHeight() + rngRowStart;
-  var rowHeights = [];
-  var rangeSheet = range.getSheet();
-
-  for( var i = rngRowStart; i < rngRowHeight; i++){
-    var rowHeight = rangeSheet.getRowHeight(i);
-    rowHeights.push(rowHeight);
-  };
-
-  return rowHeights;
-};
-
-function setRowHeights(rHeights,destRange) {
-  var rngRowStart = destRange.getRow();
-  var rngRowHeight = destRange.getHeight() + rngRowStart;
-  var destSheet = destRange.getSheet();
-  //Logger.log(destSheet.getName());
-  var count = 0;
-  
-  for ( var i = rngRowStart; i < rngRowHeight; i++) {
-    destSheet.setRowHeight(i,rHeights[count]);
-    count+=1;
-  };
-};
-*/
 
 function getRecipient(settingSheet) {
   var column = settingSheet.getRange('D2:D');
